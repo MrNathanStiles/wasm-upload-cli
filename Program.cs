@@ -5,6 +5,7 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Xml;
 
 
 /*
@@ -20,6 +21,8 @@ public class Config {
     public required string ServerUrl { get; set; }
     
 }
+
+
 public static class Program
 {
     const string CONFIG_FILE = "wasm-upload-cli.json";
@@ -33,6 +36,8 @@ public static class Program
     private static void WriteLine(string line) {
         Console.WriteLine(line);
     }
+
+    
     public static async Task Main(string[] args)
     {
         var configPath = Path.Combine(Environment.CurrentDirectory, CONFIG_FILE);
